@@ -108,7 +108,10 @@ Indexes:
 10. Unzip the dataset and move it into the `vagrant/` sub-directory.
 11. Load the dataset into PostgreSQL DBMS by typing the following command:
 
-      `psql -d news -f newsdata.sql`
+      ```SQL
+      psql -d news -f newsdata.sql
+      ```
+      
 12. Paste `log-analyser.py` from this project into the `vagrant/` directory.
 13. Run the file by typing the following command:
       On Linux, type:
