@@ -8,19 +8,18 @@ def execute_query(query):
     """Connect to the database and execute the query passed to it.
 
     Argument:
-    query (string) -- The query to execute.
+        query (string) -- The SQL query to execute.
+
+    Returns:
+        rows (list) -- A list of the resultant row(s).
     """
 
-    # Connect to the database.
     try:
         conn = psycopg2.connect("dbname=" + DBNAME)
+        c = conn.cursor()
+        c.execute(query)
+        rows = c.fetchall()
+        conn.close()
+        return rows
     except psycopg2.Error as e:
-        print("{} : {}".format(e.pgerror, e.pgerror))
-
-    # Execute query and fetch rows.
-    cur = conn.cursor()
-    cur.execute(query)
-    rows = cur.fetchall()
-    conn.close()
-    return rows
-
+        print(e)
