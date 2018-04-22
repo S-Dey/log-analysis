@@ -36,6 +36,7 @@ Foreign-key constraints:
 
     "articles_author_fkey" FOREIGN KEY (author) REFERENCES authors(id)
 
+
 2. `authors`:
 
 | Column |           Type           |                       Modifiers                       | Storage  | Stats target | Description|
@@ -56,3 +57,21 @@ Indexes:
 Foreign-key constraints:
 
     "articles_author_fkey" FOREIGN KEY (author) REFERENCES authors(id)
+    
+    
+ 3. `log`:
+ 
+|  Column |           Type           |                    Modifiers                     | Storage  | Stats target | Description|
+|-------|-------------------------|--------------------------------------------------|----------|--------------|-------------|
+| path   | text                     |                                                  | extended |              |       |
+| ip     | inet                     |                                                  | main     |              | |
+| method | text                     |                                                  | extended |              | |
+| status | text                     |                                                  | extended |              | |
+| time   | timestamp with time zone | default now()                                    | plain    |              | |
+| id     | integer                  | not null default nextval('log_id_seq'::regclass) | plain    |              | |
+
+
+Indexes:
+
+    "log_pkey" PRIMARY KEY, btree (id)
+
