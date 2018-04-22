@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
 import psycopg2
 
-DBNAME = "news"
-
 
 def execute_query(query):
     """Connect to the database and execute the query passed to it.
@@ -14,7 +12,7 @@ def execute_query(query):
         rows (list) -- A list of the resultant rows.
     """
     try:
-        conn = psycopg2.connect("dbname=" + DBNAME)
+        conn = psycopg2.connect("dbname=news")
         c = conn.cursor()
         c.execute(query)
         rows = c.fetchall()
@@ -42,7 +40,7 @@ def get_popular_articles():
     # Execute the above query.
     results = execute_query(query)
 
-    # Print the result.
+    # Print results.
     print("----------------------------------------------------------------")
     print("\t\tI. TOP THREE ARTICLES OF ALL TIME")
     print("----------------------------------------------------------------")
@@ -68,10 +66,10 @@ def get_popular_authors():
         ORDER BY num DESC
     """
 
-    # Run Query
+    # Run above query.
     results = execute_query(query)
 
-    # Print Results
+    # Print results.
     print("\n\n----------------------------------------------------------------")
     print("\t\tII. POPULAR AUTHORS OF ALL TIME")
     print("----------------------------------------------------------------")
@@ -81,10 +79,12 @@ def get_popular_authors():
         rank += 1
 
 
+# --------------------------------------------------------------
+# 3. DAYS IN WHICH MORE THAN 1% OF REQUESTS LEAD TO ERRORS
+# --------------------------------------------------------------
 def get_days_with_errors():
-    """returns days with more than 1% errors"""
+    """Return days in which more than 1% requests lead to errors."""
 
-    # Build Query String
     query = """
         SELECT total.day,
           ROUND(((errors.error_requests*1.0) / total.requests), 3) AS percent
@@ -104,10 +104,10 @@ def get_days_with_errors():
         ORDER BY percent DESC;
     """
 
-    # Run Query
+    # Execute the above query.
     results = execute_query(query)
 
-    # Print Results
+    # Print results.
     print("\n\n----------------------------------------------------------------")
     print("   III. DAYS IN WHICH MORE THAN 1% OF REQUESTS LEAD TO ERRORS")
     print("----------------------------------------------------------------")
