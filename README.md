@@ -40,6 +40,7 @@ The database `news` includes three tables:
 Indexes:
 
    `"articles_pkey" PRIMARY KEY, btree (id)`
+
    `"articles_slug_key" UNIQUE CONSTRAINT, btree (slug)`
 
 Foreign-key constraints:
@@ -63,6 +64,7 @@ Foreign-key constraints:
 Indexes:
 
    `"articles_pkey" PRIMARY KEY, btree (id)`
+
    `"articles_slug_key" UNIQUE CONSTRAINT, btree (slug)`
 
 Foreign-key constraints:
