@@ -32,8 +32,8 @@ def get_popular_articles():
 
     query = """
         SELECT articles.title, COUNT(*) AS article_views
-            FROM articles INNER JOIN log
-            ON log.path LIKE concat('/article/%', articles.slug)
+            FROM articles JOIN log
+            ON log.path = concat('/article/', articles.slug)
             GROUP BY articles.title
             ORDER BY article_views DESC
             LIMIT 3;
@@ -43,14 +43,13 @@ def get_popular_articles():
     results = execute_query(query)
 
     # Print the result.
-    print('\nTOP THREE ARTICLES BY PAGE VIEWS:')
-    count = 1
+    print('--------------------------------------------------------------------')
+    print('\t\tI. TOP THREE ARTICLES OF ALL TIME')
+    print('--------------------------------------------------------------------')
+    rank = 1
     for row in results:
-        number = '(' + str(count) + ') "'
-        title = row[0]
-        views = '" with ' + str(row[1]) + " views"
-        print(number + title + views)
-        count += 1
+        print(u"  {0}. \"{1}\" — {2} views.".format(rank, row[0], row[1]))
+        rank += 1
 
 
 if __name__ == '__main__':
