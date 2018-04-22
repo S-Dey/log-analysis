@@ -91,10 +91,15 @@ Indexes:
 ## Steps to run this project
 
 1. Download Vagrant from [here](https://www.vagrantup.com/downloads.html), and install it.
+
 2. Download VirtualBox from [here](https://www.virtualbox.org/wiki/Downloads), and install it.
+
 3. Download the latest version of Python 3 from [here](https://www.python.org/downloads/), and install it.
+
 4. Clone or download [this](https://github.com/udacity/fullstack-nanodegree-vm) repository.
+
 5. Open the above directory and navigate to the `vagrant/` sub-directory.
+
 6. Open terminal, and type
 
    ```bash
@@ -108,8 +113,11 @@ Indexes:
    vagrant ssh
    ```
 8. In the terminal, type `cd /vagrant/`.
+
 9. Download the dataset from [here](https://d17h27t6h515a5.cloudfront.net/topher/2016/August/57b5f748_newsdata/newsdata.zip).
+
 10. Unzip the dataset and move it into the `vagrant/` sub-directory.
+
 11. Load the dataset into PostgreSQL DBMS by typing the following command:
 
       ```bash
@@ -117,6 +125,7 @@ Indexes:
       ```
       
 12. Paste `log-analyser.py` from this project into the `vagrant/` directory.
+
 13. Run the file by typing the following command:
       On Linux, type:
 
@@ -133,15 +142,16 @@ Indexes:
      If you are getting an error regarding absence of `psycopg2`, run the following command:
      
      ```bash
-     pip install psycopg2
+     pip3 install psycopg2
      ```
+     Kindly note that in Linux systems, you may need superuser permission to install this package.
+     
 14. To generate the report as text file, type:
       ```bash
       python3 log-analyser.py >> report.txt
       ```
     You can then open the file `report.txt` with any text editor.
  
-
 ## Contact Information
 
 If you are stuck at any problem, contact me on [Twitter](https://twitter.com/SDey_96).
