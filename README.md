@@ -76,19 +76,31 @@ Foreign-key constraints:
 Indexes:
 
    `"log_pkey" PRIMARY KEY, btree (id)`
-\
-\
+
 ## Steps to run this project
-1. Download and install Vagrant from [here](https://www.vagrantup.com/downloads.html).
-2. Download and install VirtualBox from [here](https://www.virtualbox.org/wiki/Downloads).
-3. Clone or download [this](https://github.com/udacity/fullstack-nanodegree-vm) repository.
-4. Open the downloaded directory and navigate to the `vagrant/` directory.
-5. Open terminal there, and type
-                  
+1. Download Vagrant from [here](https://www.vagrantup.com/downloads.html) and install it.
+2. Download VirtualBox from [here](https://www.virtualbox.org/wiki/Downloads) and install it.
+3. Download the latest version of Python 3 from [here](https://www.python.org/downloads/), and install it.
+4. Clone or download [this](https://github.com/udacity/fullstack-nanodegree-vm) repository.
+5. Open the above directory and navigate to the `vagrant/` sub-directory.
+6. Open terminal, and type
+
                   vagrant up
    This will cause Vagrant to download the Ubuntu operating system and install it. This may take quite a while depending on how fast your Internet connection is.
-6. After the above command succeeds, connect to the VM by typing the following command:
+7. After the above command succeeds, connect to the newly created VM by typing the following command:
 
                   vagrant ssh
            
-6.  
+8. In the terminal, type `cd /vagrant/`.
+9. Download the dataset from [here](https://d17h27t6h515a5.cloudfront.net/topher/2016/August/57b5f748_newsdata/newsdata.zip).
+10. Unzip the dataset and move it into the `vagrant/` sub-directory.
+11. Load the dataset into PostgreSQL DBMS by typing the following command:
+      `psql -d news -f newsdata.sql`
+11. Paste the `log-analyser.py` file into this `vagrant/` directory.
+12. Run the file by typing the following command:
+      ```bash
+         python3 log-analyser.py
+      ```
+
+## Contact Information
+If you are stuck at any problem, contact me on [Twitter](https://twitter.com/SDey_96].
