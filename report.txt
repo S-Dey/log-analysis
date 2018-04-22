@@ -1,0 +1,21 @@
+----------------------------------------------------------
+		I. TOP THREE ARTICLES OF ALL TIME
+----------------------------------------------------------
+  1. "Candidate is jerk, alleges rival" — 338,647 views.
+  2. "Bears love berries, alleges bear" — 253,801 views.
+  3. "Bad things gone, say good people" — 170,098 views.
+
+
+----------------------------------------------------------
+		II. POPULAR AUTHORS OF ALL TIME
+----------------------------------------------------------
+  1. Ursula La Multa — 507,594 views.
+  2. Rudolf von Treppenwitz — 423,457 views.
+  3. Anonymous Contributor — 170,098 views.
+  4. Markoff Chaney — 84,557 views.
+
+
+----------------------------------------------------------
+  III. DAYS IN WHICH MORE THAN 1% OF REQUESTS LEAD TO ERRORS
+----------------------------------------------------------
+   July 17, 2016 — 2.3% errors
