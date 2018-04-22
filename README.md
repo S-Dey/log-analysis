@@ -28,10 +28,12 @@ The database `news` includes three tables:
 | id     | integer                  | not null default nextval('articles_id_seq'::regclass) | plain    |              |            |
 
 Indexes:
+
     "articles_pkey" PRIMARY KEY, btree (id)    
     "articles_slug_key" UNIQUE CONSTRAINT, btree (slug)
 
-Foreign-key constraints:    
+Foreign-key constraints:  
+
     "articles_author_fkey" FOREIGN KEY (author) REFERENCES authors(id)
 
 2. `authors`:
@@ -47,8 +49,10 @@ Foreign-key constraints:
 | id     | integer                  | not null default nextval('articles_id_seq'::regclass) | plain    |              |             |
 
 Indexes:
+
     "articles_pkey" PRIMARY KEY, btree (id)    
     "articles_slug_key" UNIQUE CONSTRAINT, btree (slug)
     
 Foreign-key constraints:
+
     "articles_author_fkey" FOREIGN KEY (author) REFERENCES authors(id)
