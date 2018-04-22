@@ -95,12 +95,21 @@ Indexes:
 9. Download the dataset from [here](https://d17h27t6h515a5.cloudfront.net/topher/2016/August/57b5f748_newsdata/newsdata.zip).
 10. Unzip the dataset and move it into the `vagrant/` sub-directory.
 11. Load the dataset into PostgreSQL DBMS by typing the following command:
+
       `psql -d news -f newsdata.sql`
 11. Paste the `log-analyser.py` file into this `vagrant/` directory.
 12. Run the file by typing the following command:
+      On Linux, type:
+      
       ```bash
-         python3 log-analyser.py
+      python3 log-analyser.py
+      ```
+      
+      On Windows, type:
+      
+      ```powershell
+      python log-analyser.py
       ```
 
 ## Contact Information
-If you are stuck at any problem, contact me on [Twitter](https://twitter.com/SDey_96].
+If you are stuck at any problem, contact me on [Twitter](https://twitter.com/SDey_96).
