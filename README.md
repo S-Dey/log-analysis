@@ -97,21 +97,22 @@ Indexes:
 5. Open the above directory and navigate to the `vagrant/` sub-directory.
 6. Open terminal, and type
 
-```vagrant up```
+```bash
+vagrant up
+```
 
    This will cause Vagrant to download the Ubuntu operating system and install it. This may take quite a while depending on how fast your Internet connection is.
 7. After the above command succeeds, connect to the newly created VM by typing the following command:
 
-```
+```bash
 vagrant ssh
-
 ```
 8. In the terminal, type `cd /vagrant/`.
 9. Download the dataset from [here](https://d17h27t6h515a5.cloudfront.net/topher/2016/August/57b5f748_newsdata/newsdata.zip).
 10. Unzip the dataset and move it into the `vagrant/` sub-directory.
 11. Load the dataset into PostgreSQL DBMS by typing the following command:
 
-      ```SQL
+      ```bash
       psql -d news -f newsdata.sql
       ```
       
@@ -134,6 +135,11 @@ vagrant ssh
      ```bash
      pip install psycopg2
      ```
+14. To generate the report as text file, type:
+```bash
+python3 log-analyser.py >> report.txt
+```
+   You can then open the file `report.txt` with any text editor.
  
 
 ## Contact Information
