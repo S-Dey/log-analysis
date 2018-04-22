@@ -29,12 +29,12 @@ The database `news` includes three tables:
 
 Indexes:
 
-   "articles_pkey" PRIMARY KEY, btree (id)    
-   "articles_slug_key" UNIQUE CONSTRAINT, btree (slug)
+   `"articles_pkey" PRIMARY KEY, btree (id)`    
+   `"articles_slug_key" UNIQUE CONSTRAINT, btree (slug)`
 
 Foreign-key constraints:  
 
-   "articles_author_fkey" FOREIGN KEY (author) REFERENCES authors(id)
+   `"articles_author_fkey" FOREIGN KEY (author) REFERENCES authors(id)`
 
 
 2. `authors`:
@@ -51,12 +51,12 @@ Foreign-key constraints:
 
 Indexes:
 
-   "articles_pkey" PRIMARY KEY, btree (id)    
-   "articles_slug_key" UNIQUE CONSTRAINT, btree (slug)
+   `"articles_pkey" PRIMARY KEY, btree (id)`    
+   `"articles_slug_key" UNIQUE CONSTRAINT, btree (slug)`
     
 Foreign-key constraints:
 
-   "articles_author_fkey" FOREIGN KEY (author) REFERENCES authors(id)
+   `"articles_author_fkey" FOREIGN KEY (author) REFERENCES authors(id)`
     
     
  3. `log`:
@@ -73,5 +73,5 @@ Foreign-key constraints:
 
 Indexes:
 
-   "log_pkey" PRIMARY KEY, btree (id)
+   `"log_pkey" PRIMARY KEY, btree (id)`
 
