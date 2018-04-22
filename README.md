@@ -97,7 +97,7 @@ Indexes:
 11. Load the dataset into PostgreSQL DBMS by typing the following command:
 
       `psql -d news -f newsdata.sql`
-11. Paste the `log-analyser.py` file into this `vagrant/` directory.
+11. Paste `log-analyser.py` from this project into the `vagrant/` directory.
 12. Run the file by typing the following command:
       On Linux, type:
       
@@ -108,7 +108,7 @@ Indexes:
       On Windows, type:
       
       ```powershell
-      python log-analyser.py
+      python.exe log-analyser.py
       ```
 
 ## Contact Information
