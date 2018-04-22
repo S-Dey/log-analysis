@@ -17,8 +17,8 @@ The database `news` includes three tables:
 ## Database Schema
 1. `articles`:
 
-| Column |           Type           |                       Modifiers                       | Storage  | Stats target | Description
------------------------------------------------------------------------------------------------------------------------------------
+| Column |           Type           |                       Modifiers                       | Storage  | Stats target | Description|
+|--------|--------------------------|-------------------------------------------------------|----------|--------------|------------|
 | author | integer                  | not null                                              | plain    |              |            |
 | title  | text                     | not null                                              | extended |              |            |
 | slug   | text                     | not null                                              | extended |              |            |
