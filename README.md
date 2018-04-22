@@ -88,8 +88,8 @@ Indexes:
 
 ## Steps to run this project
 
-1. Download Vagrant from [here](https://www.vagrantup.com/downloads.html) and install it.
-2. Download VirtualBox from [here](https://www.virtualbox.org/wiki/Downloads) and install it.
+1. Download Vagrant from [here](https://www.vagrantup.com/downloads.html), and install it.
+2. Download VirtualBox from [here](https://www.virtualbox.org/wiki/Downloads), and install it.
 3. Download the latest version of Python 3 from [here](https://www.python.org/downloads/), and install it.
 4. Clone or download [this](https://github.com/udacity/fullstack-nanodegree-vm) repository.
 5. Open the above directory and navigate to the `vagrant/` sub-directory.
