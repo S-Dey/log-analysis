@@ -15,7 +15,7 @@ The database `news` includes three tables:
 3. `log` - Includes one entry for each time a user has accessed the site.
 
 ## Database Schema
-1. `articles`:
+1. **articles**:
 
 | Column |           Type           |                       Modifiers                       | Storage  | Stats target | Description|
 |--------|--------------------------|-------------------------------------------------------|----------|--------------|------------|
@@ -37,7 +37,8 @@ Foreign-key constraints:
    `"articles_author_fkey" FOREIGN KEY (author) REFERENCES authors(id)`
 
 
-2. `authors`:
+
+2. **authors**:
 
 | Column |           Type           |                       Modifiers                       | Storage  | Stats target | Description|
 |--------|--------------------------|-------------------------------------------------------|----------|--------------|-------------|
@@ -59,7 +60,7 @@ Foreign-key constraints:
    `"articles_author_fkey" FOREIGN KEY (author) REFERENCES authors(id)`
     
     
- 3. `log`:
+ 3. **log**:
  
 |  Column |           Type           |                    Modifiers                     | Storage  | Stats target | Description|
 |-------|-------------------------|--------------------------------------------------|----------|--------------|-------------|
