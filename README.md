@@ -124,7 +124,7 @@ Indexes:
      
      If you are getting an error regarding absence of `psycopg2`, run the following command:
      
-     `pip install psycopg2`
+     ```pip install psycopg2```
  
 
 ## Contact Information
