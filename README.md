@@ -121,6 +121,11 @@ Indexes:
       ```powershell
       python.exe log-analyser.py
       ```
+     
+     If you are getting an error regarding absence of `psycopg2`, run the following command:
+     
+     `pip install psycopg2`
+ 
 
 ## Contact Information
 
