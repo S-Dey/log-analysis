@@ -144,7 +144,7 @@ Indexes:
      ```bash
      pip3 install psycopg2
      ```
-     Kindly note that in Linux systems, you may need superuser permission to install this package.
+      **NOTE:** In Linux, you may need superuser permission to install this package. So, in such case, just prefix the command with `sudo`.
      
 14. To generate the report as text file, type:
       ```bash
