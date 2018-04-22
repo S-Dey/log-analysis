@@ -10,7 +10,17 @@ def execute_query(query):
     Argument:
     query (string) -- The query to execute.
     """
+
+    # Connect to the database.
     try:
         conn = psycopg2.connect("dbname=" + DBNAME)
     except psycopg2.Error as e:
-        print("Unable to connect to the database.")
+        print("{} : {}".format(e.pgerror, e.pgerror))
+
+    # Execute query and fetch rows.
+    cur = conn.cursor()
+    cur.execute(query)
+    rows = cur.fetchall()
+    conn.close()
+    return rows
+
