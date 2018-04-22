@@ -37,6 +37,7 @@ Foreign-key constraints:
    `"articles_author_fkey" FOREIGN KEY (author) REFERENCES authors(id)`
 \
 \
+\
 **2. authors:**
 
 | Column |           Type           |                       Modifiers                       | Storage  | Stats target | Description|
@@ -57,6 +58,7 @@ Indexes:
 Foreign-key constraints:
 
    `"articles_author_fkey" FOREIGN KEY (author) REFERENCES authors(id)`
+\
 \
 \
 **3. log:**
