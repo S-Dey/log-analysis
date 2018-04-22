@@ -27,3 +27,24 @@ The database `news` includes three tables:
 | time   | timestamp with time zone | default now()                                         | plain    |              |            |
 | id     | integer                  | not null default nextval('articles_id_seq'::regclass) | plain    |              |            |
 
+Indexes:
+    "articles_pkey" PRIMARY KEY, btree (id)
+    "articles_slug_key" UNIQUE CONSTRAINT, btree (slug)
+Foreign-key constraints:
+    "articles_author_fkey" FOREIGN KEY (author) REFERENCES authors(id)
+
+2. `authors`:
+| Column |           Type           |                       Modifiers                       | Storage  | Stats target | Description|
+|--------|--------------------------|-------------------------------------------------------|----------|--------------|-------------|
+| author | integer                  | not null                                              | plain    |              |             |
+| title  | text                     | not null                                              | extended |              |             |
+| slug   | text                     | not null                                              | extended |              |             |
+| lead   | text                     |                                                       | extended |              |             |
+| body   | text                     |                                                       | extended |              |             |
+| time   | timestamp with time zone | default now()                                         | plain    |              |             |
+| id     | integer                  | not null default nextval('articles_id_seq'::regclass) | plain    |              |             |
+
+Indexes:
+    "articles_pkey" PRIMARY KEY, btree (id)
+    "articles_slug_key" UNIQUE CONSTRAINT, btree (slug)
+Foreign-key constraints:
