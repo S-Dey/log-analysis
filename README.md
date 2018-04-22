@@ -76,4 +76,19 @@ Foreign-key constraints:
 Indexes:
 
    `"log_pkey" PRIMARY KEY, btree (id)`
+\
+\
+## Steps to run this project
+1. Download and install Vagrant from [here](https://www.vagrantup.com/downloads.html).
+2. Download and install VirtualBox from [here](https://www.virtualbox.org/wiki/Downloads).
+3. Clone or download [this](https://github.com/udacity/fullstack-nanodegree-vm) repository.
+4. Open the downloaded directory and navigate to the `vagrant/` directory.
+5. Open terminal there, and type
+                  
+                  vagrant up
+   This will cause Vagrant to download the Ubuntu operating system and install it. This may take quite a while depending on how fast your Internet connection is.
+6. After the above command succeeds, connect to the VM by typing the following command:
 
+                  vagrant ssh
+           
+6.  
