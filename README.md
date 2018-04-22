@@ -14,6 +14,8 @@ The dataset has over 300k rows, and has to report the following questions:
 
 3. On which days did more than 1% of requests lead to errors?
 
+\
+
 The database `news` includes three tables:
 
 1. `articles` - Includes information about the authors of articles.
