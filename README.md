@@ -7,12 +7,15 @@ An Udacity Full-Stack Web Development Nanodegree project created by Subhadeep De
 It is a reporting tool that prints out reports (in plain text) based on the data in the database `news`. This reporting tool is a Python program using the `psycopg2` module to connect to the database.
 
 The dataset has over 300k rows, and has to report the following questions:
-```
+
+```text
+
 1. What are the most popular three articles of all time?
 
 2. Who are the most popular article authors of all time?
 
 3. On which days did more than 1% of requests lead to errors?
+
 ```
 
 The database `news` includes three tables:
@@ -105,6 +108,7 @@ Indexes:
    ```bash
    vagrant up
    ```
+
    This will cause Vagrant to download the Ubuntu operating system and install it. This may take quite a while depending on how fast your Internet connection is.
 
 7. After the above command succeeds, connect to the newly created VM by typing the following command:
@@ -112,6 +116,7 @@ Indexes:
    ```bash
    vagrant ssh
    ```
+
 8. In the terminal, type `cd /vagrant/`.
 
 9. Download the dataset from [here](https://d17h27t6h515a5.cloudfront.net/topher/2016/August/57b5f748_newsdata/newsdata.zip).
@@ -123,7 +128,7 @@ Indexes:
       ```bash
       psql -d news -f newsdata.sql
       ```
-      
+
 12. Paste `log-analyser.py` from this project into the `vagrant/` directory.
 
 13. Run the file by typing the following command:
@@ -138,20 +143,20 @@ Indexes:
       ```powershell
       python.exe log-analyser.py
       ```
-     
+
      If you are getting an error regarding absence of `psycopg2`, run the following command:
-     
+
      ```bash
      pip3 install psycopg2
      ```
       **NOTE:** In Linux, you may need superuser permission to install this package. So, in such case, just prefix the command with `sudo`.
-     
+
 14. To generate the report as text file, type:
       ```bash
       python3 log-analyser.py >> report.txt
       ```
     You can then open the file `report.txt` with any text editor.
- 
+
 ## Contact Information
 
 If you are stuck at any problem, contact me on [Twitter](https://twitter.com/SDey_96).
