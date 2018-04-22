@@ -97,12 +97,15 @@ Indexes:
 5. Open the above directory and navigate to the `vagrant/` sub-directory.
 6. Open terminal, and type
 
-                  vagrant up
+```vagrant up```
+
    This will cause Vagrant to download the Ubuntu operating system and install it. This may take quite a while depending on how fast your Internet connection is.
 7. After the above command succeeds, connect to the newly created VM by typing the following command:
 
-                  vagrant ssh
+```
+vagrant ssh
 
+```
 8. In the terminal, type `cd /vagrant/`.
 9. Download the dataset from [here](https://d17h27t6h515a5.cloudfront.net/topher/2016/August/57b5f748_newsdata/newsdata.zip).
 10. Unzip the dataset and move it into the `vagrant/` sub-directory.
@@ -128,7 +131,9 @@ Indexes:
      
      If you are getting an error regarding absence of `psycopg2`, run the following command:
      
-     ```pip install psycopg2```
+     ```bash
+     pip install psycopg2
+     ```
  
 
 ## Contact Information
