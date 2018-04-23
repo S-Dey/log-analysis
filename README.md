@@ -97,7 +97,7 @@ Indexes:
 
 3. Download the latest version of Python 3 from [here](https://www.python.org/downloads/), and install it.
 
-4. Clone or download [this](https://github.com/udacity/fullstack-nanodegree-vm) repository.
+4. Clone or download the Vagrant VM configuration file from [here](https://github.com/udacity/fullstack-nanodegree-vm).
 
 5. Open the above directory and navigate to the `vagrant/` sub-directory.
 
@@ -127,7 +127,7 @@ Indexes:
       psql -d news -f newsdata.sql
       ```
 
-12. Paste `log-analyser.py` from this project into the `vagrant/` directory.
+12. Paste `log-analyser.py` from this project into the `vagrant/` sub-directory.
 
 13. Run the file by typing the following command:
       If you are using Linux, then type:
