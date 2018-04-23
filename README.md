@@ -142,13 +142,6 @@ Indexes:
       python.exe log-analyser.py
       ```
 
-     If you are getting an error regarding absence of `psycopg2`, run the following command:
-
-     ```bash
-     pip3 install psycopg2
-     ```
-      **NOTE:** In Linux, you may need superuser permission to install this package. So, in such case, just prefix the command with `sudo`.
-
 14. To generate the report as text file, type:
       ```bash
       python3 log-analyser.py > report.txt
@@ -176,6 +169,17 @@ Indexes:
       `psql: could not connect to server: Connection refused`
    
       — this means the database server is not running or is not set up correctly. This can happen if you have an older version of the VM configuration from before this project was added. To continue, download the virtual machine configuration into a fresh new directory and start it from there.
+      
+3. If you are getting the following error:
+   
+   `ImportError: No module named psycopg2`
+   
+   then you have to install the module `psycopg2` by running the following command in terminal:
+   ```bash
+   pip3 install psycopg2
+   ```
+   
+   **NOTE:** In Linux systems, you may need superuser permission to install this package. So, in such case, just prefix the command with `sudo`, and follow the instructions.
 
 ## Contact Information
 
