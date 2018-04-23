@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+import sys
+import psycopg2
+
 """Module to analyse the log and print desired results.
 
 It prints the results of the following problems from the 'news'
@@ -12,9 +15,6 @@ be found in the README.md file, which is included with this project.
 """
 
 __author__ = 'Subhadeep Dey'
-
-import sys
-import psycopg2
 
 
 def execute_query(query):
