@@ -91,9 +91,9 @@ Indexes:
 
 ## Steps to run this project
 
-1. Download Vagrant from [here](https://www.vagrantup.com/downloads.html), and install it.
+1. Download and install [Vagrant](https://www.vagrantup.com/downloads.html).
 
-2. Download VirtualBox from [here](https://www.virtualbox.org/wiki/Downloads), and install it.
+2. Download and install [VirtualBox](https://www.virtualbox.org/wiki/Downloads).
 
 3. Download the latest version of Python 3 from [here](https://www.python.org/downloads/), and install it.
 
@@ -130,13 +130,13 @@ Indexes:
 12. Paste `log-analyser.py` from this project into the `vagrant/` directory.
 
 13. Run the file by typing the following command:
-      On Linux, type:
+      If you are using Linux, then type:
 
       ```bash
       python3 log-analyser.py
       ```
 
-      On Windows, type:
+      If you are using Windows, then type:
 
       ```powershell
       python.exe log-analyser.py
