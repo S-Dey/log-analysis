@@ -172,9 +172,11 @@ Indexes:
       
 3. If you are getting the following error:
    
-   `ImportError: No module named psycopg2`
+   ```
+   ImportError: No module named psycopg2
+   ```
    
-   then you have to install the module `psycopg2` by running the following command in terminal:
+   then you will have to install the module `psycopg2` by running the following command in terminal:
    ```bash
    pip3 install psycopg2
    ```
