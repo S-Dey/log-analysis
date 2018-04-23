@@ -170,8 +170,11 @@ Indexes:
       ```
  
  2. If the command `psql -d news -f newsdata.sql` gives an error message, such as —
+ 
    `psql: FATAL: database "news" does not exist`
+   
    `psql: could not connect to server: Connection refused`
+   
 — this means the database server is not running or is not set up correctly. This can happen if you have an older version of the VM configuration from before this project was added. To continue, download the virtual machine configuration into a fresh new directory and start it from there.
 
 ## Contact Information
