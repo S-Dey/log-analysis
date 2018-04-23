@@ -154,6 +154,25 @@ Indexes:
       python3 log-analyser.py > report.txt
       ```
     You can then open the file `report.txt` with any text editor.
+    
+## Debugging
+1. If you'd like to revert the news database to its original form, you can do that by dropping each of the tables, then re-importing the data from the `newsdata.sql` file.
+
+   In psql:
+   ```sql
+   DROP TABLE log;
+   DROP TABLE articles;
+   DROP TABLE authors;
+   ```
+   Then in the shell, re-import the data:
+      ```bash
+      psql -d news -f newsdata.sql
+      ```
+ 
+ 2. If the command `psql -d news -f newsdata.sql` gives an error message, such as —
+   `psql: FATAL: database "news" does not exist`
+   `psql: could not connect to server: Connection refused`
+— this means the database server is not running or is not set up correctly. This can happen if you have an older version of the VM configuration from before this project was added. To continue, download the virtual machine configuration into a fresh new directory and start it from there.
 
 ## Contact Information
 
