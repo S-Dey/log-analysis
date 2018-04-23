@@ -175,7 +175,7 @@ Indexes:
    
       `psql: could not connect to server: Connection refused`
    
-   — this means the database server is not running or is not set up correctly. This can happen if you have an older version of the VM configuration from before this project was added. To continue, download the virtual machine configuration into a fresh new directory and start it from there.
+      — this means the database server is not running or is not set up correctly. This can happen if you have an older version of the VM configuration from before this project was added. To continue, download the virtual machine configuration into a fresh new directory and start it from there.
 
 ## Contact Information
 
