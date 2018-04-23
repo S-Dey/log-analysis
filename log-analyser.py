@@ -30,7 +30,7 @@ class LogAnalyser:
             query (string) -- The SQL query to execute.
 
         Returns:
-            rows (list) -- A list of the resultant rows.
+            rows (list) -- A list of resultant rows.
         """
         self.c.execute(query)
         rows = self.c.fetchall()
