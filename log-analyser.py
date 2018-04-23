@@ -72,12 +72,12 @@ class LogAnalyser:
 
         query = """
             SELECT authors.name, COUNT(*) AS views
-            FROM authors JOIN articles
-            ON authors.id = articles.author
-            JOIN log
-            ON log.path = concat('/article/', articles.slug)
-            GROUP BY authors.name
-            ORDER BY views DESC
+                FROM authors JOIN articles
+                    ON authors.id = articles.author
+                JOIN log
+                    ON log.path = concat('/article/', articles.slug)
+                GROUP BY authors.name
+                ORDER BY views DESC
         """
 
         # Run above query.
@@ -100,22 +100,23 @@ class LogAnalyser:
 
         query = """
             SELECT total.day,
-            ROUND(((errors.error_requests*1.0) / total.requests), 3) AS percent
+            ROUND(((errors.err_requests*1.0) / total.requests), 10)
+            AS percent
             FROM (
-                SELECT date_trunc('day', time) "day", count(*)
-                AS error_requests
-                FROM log
-                WHERE status LIKE '404%'
-                GROUP BY day
+                  SELECT date_trunc('day', time) AS day, count(*)
+                  AS err_requests
+                  FROM log
+                  WHERE status LIKE '404%'
+                  GROUP BY day
                 ) AS errors
             JOIN (
-                SELECT date_trunc('day', time) "day", count(*) AS requests
-                FROM log
-                GROUP BY day
+                  SELECT date_trunc('day', time) AS day, count(*) AS requests
+                  FROM log
+                  GROUP BY day
                 ) AS total
             ON total.day = errors.day
             WHERE
-                (ROUND(((errors.error_requests*1.0)/total.requests), 3) > 0.01)
+                (ROUND(((errors.err_requests*1.0)/total.requests), 10) > 0.01)
             ORDER BY percent DESC;
         """
 
@@ -128,7 +129,7 @@ class LogAnalyser:
         print("----------------------------------------------------------")
         for row in results:
             date = row[0].strftime('%B %d, %Y')     # Pretty-formatting date.
-            errors = str(round(row[1]*100, 1)) + "%" + " errors"
+            errors = str(round(row[1]*100, 2)) + "%" + " errors"
             print("   " + date + u" — " + errors)
 
 
