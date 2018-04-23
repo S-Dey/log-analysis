@@ -151,7 +151,7 @@ Indexes:
 
 14. To generate the report as text file, type:
       ```bash
-      python3 log-analyser.py >> report.txt
+      python3 log-analyser.py > report.txt
       ```
     You can then open the file `report.txt` with any text editor.
 
