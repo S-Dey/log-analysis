@@ -102,8 +102,7 @@ def get_days_with_errors():
         SELECT total.day,
           ROUND(((errors.err_requests * 100.0) / total.requests), 5) AS percent
         FROM (
-              SELECT date_trunc('day', time) AS day, count(*)
-              AS err_requests
+              SELECT date_trunc('day', time) AS day, count(*) AS err_requests
               FROM log
               WHERE status LIKE '404%'
               GROUP BY day
