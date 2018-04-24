@@ -100,7 +100,7 @@ def get_days_with_errors():
     """Return days in which more than 1% requests lead to errors."""
     query = """
         SELECT total.day,
-          ROUND(((errors.err_requests*1.0) / total.requests), 10) AS percent
+          ROUND(((errors.err_requests*100.0) / total.requests), 5) AS percent
         FROM (
               SELECT date_trunc('day', time) AS day, count(*)
               AS err_requests
@@ -114,7 +114,7 @@ def get_days_with_errors():
               GROUP BY day
             ) AS total
         ON total.day = errors.day
-        WHERE (ROUND(((errors.err_requests*1.0)/total.requests), 10) > 0.01)
+        WHERE (ROUND(((errors.err_requests*100.0)/total.requests), 5) > 1.0)
         ORDER BY percent DESC;
     """
 
@@ -127,7 +127,7 @@ def get_days_with_errors():
     print("--------------------------------------------------------------")
     for row in results:
         date = row[0].strftime('%B %d, %Y')     # Pretty-formatting date.
-        errors = str(round(row[1]*100, 2)) + "%" + " errors"
+        errors = str(round(row[1], 2)) + "%" + " errors"
         print("   " + date + u" — " + errors)
 
 
