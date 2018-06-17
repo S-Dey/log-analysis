@@ -25,6 +25,7 @@ def execute_query(query):
 
     Returns:
         rows (list) -- A list of resultant rows.
+
     """
     try:
         conn = psycopg2.connect('dbname=news')
